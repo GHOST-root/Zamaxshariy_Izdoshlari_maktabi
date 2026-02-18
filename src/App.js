@@ -16,7 +16,7 @@ import ProtectedAdmin from "./components/ProtectedAdmin";
 import ApplicationModal from "./components/ApplicationModal";
 
 function App() {
-  const [openModal, setOpenModal] = useState(false);
+  // const [openModal, setOpenModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState("light");
   const navigate = useNavigate();
