@@ -2,6 +2,7 @@ import './components.css'
 import logo from '../assets/logo.png'
 import LeadModal from './LeadModal'
 import { useState } from 'react'
+import { NavLink } from "react-router-dom";
 
 function MobileMenu({ open, onClose }) {
   const [openModal, setOpenModal] = useState(false); // ✅ har doim tepada
@@ -28,9 +29,9 @@ function MobileMenu({ open, onClose }) {
           </div>
 
           <nav className="menu-links">
-            <a href="/" onClick={onClose}>Bosh sahifa</a>
-            <a href="/about" onClick={onClose}>Biz haqimizda</a>
-            <a href="/vacansy" onClick={onClose}>Karyera</a>
+            <NavLink to="/" onClick={onClose}>Bosh sahifa</NavLink>
+            <NavLink to="/about" onClick={onClose}>Biz haqimizda</NavLink>
+            <NavLink to="/vacansy" onClick={onClose}>Karyera</NavLink>
           </nav>
         </div>
 
