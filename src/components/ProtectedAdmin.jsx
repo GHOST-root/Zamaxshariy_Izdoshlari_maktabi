@@ -5,6 +5,10 @@ import { AuthContext } from "../context/AuthContext";
 function ProtectedAdmin({ children }) {
   const { isAdmin } = useContext(AuthContext);
 
+  if (isAdmin === null) {
+    return null; // yoki loader
+  }
+
   if (!isAdmin) {
     return <Navigate to="/admin-login" replace />;
   }
